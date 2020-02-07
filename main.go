@@ -3,11 +3,12 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/urfave/cli"
 	"os"
 	"strings"
-	"tcping/tcping"
 	"time"
+
+	"github.com/freshcn/tcping/tcping"
+	"github.com/urfave/cli"
 )
 
 func main() {
@@ -45,7 +46,7 @@ func Run(c *cli.Context) (err error) {
 	if len(c.Args()) < 1 {
 		return errors.New("parameter cannot be empty")
 	}
-	host := c.Args()[len(c.Args()) - 1]
+	host := c.Args()[len(c.Args())-1]
 
 	if host == "" {
 		return errors.New("parameter cannot be empty")

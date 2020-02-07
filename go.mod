@@ -1,4 +1,4 @@
-module tcping
+module github.com/freshcn/tcping
 
 go 1.13
 
